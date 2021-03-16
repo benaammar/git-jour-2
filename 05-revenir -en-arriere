@@ -1,0 +1,41 @@
+// les commandes de git qui permettent de revenir en arrière 
+
+git log --oneline 
+q pour libérer le terminal
+clear
+git checkout 1b62000
+
+permet de revenir en arrière à l'étape mentionnée 1b62000
+à cette étape / version vous pouvez regarder MAIS vous en pouvez pas modifier et réaliser des commit 
+
+O       -----   O -------   X    -------- O
+1b62009      1b62000    impossible      1b62002
+
+il est possible de revenir dans le passé 
+Mais il est impossible de le modifié => ajouter une étape dans le passé 
+
+git checkout master
+
+aller voir le passé 
+git log --oneline => récupérer un id
+git checkout id 
+
+revenir à maintenant 
+git checkout master 
+
+=> supprimer toutes les étapes du passé jusqu'à l'étape souhaitée 
+
+git log --oneline 0fbca64
+q pour librairer le terminal 
+
+git reset 0fbca64 --hard 
+
+HEAD is now at 0fbca64 création du fichier data.json
+
+//------- 
+
+git log --oneline => id 0fbca64
+
+git revert  0fbca64 => copier un ancien commit et le mettre comme un commit actuelle 
+
+
